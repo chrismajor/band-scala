@@ -10,7 +10,9 @@ class BandName (
                ) {
 
   def this(originalTitle: String) = {
-    this(originalTitle, filterTitle(originalTitle), "")
+    // TODO: fix this cludge so that the filterTitle method is called...
+    this(originalTitle, originalTitle.split("\\(")(0), "")
+//    this(originalTitle, filterTitle(originalTitle), "")
   }
 
   def isValid() : Boolean = {
