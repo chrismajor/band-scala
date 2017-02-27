@@ -4,18 +4,16 @@ package io.chrismajor.bandname
   * Business logic for title generation
   */
 object TitleGenerator {
-  def generateNewTitle() : String = {
+  def generateNewTitle():String = {
     var validBandname = false
+    var bandname : BandName = null
 
-    do {
-      val bandname = generateTitle()
+    while (!validBandname) {
+      bandname = generateTitle()
       validBandname = bandname.isValid()
-
-      if (validBandname) {
-        bandname.filteredTitle
-      }
     }
-    while (validBandname)
+
+    bandname.filteredTitle
   }
 
   private def generateTitle(): BandName = {
