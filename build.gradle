@@ -1,5 +1,7 @@
 apply plugin: 'scala'
 
+//defaultTasks 'build'
+
 repositories {
 	mavenCentral()
 }
@@ -7,6 +9,8 @@ repositories {
 dependencies {
 	compile 'org.scala-lang:scala-library-all:2.12.1'
 	compile 'org.scalaj:scalaj-http_2.12:2.3.0'
+	testCompile 'org.scalatest:scalatest_2.12:3.0.1'
+	testCompile 'org.scalactic:scalactic:3.0.1'
 }
 
 jar {

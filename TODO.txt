@@ -1,5 +1,2 @@
-- implement build in SBT
-- write some unit tests
-    - using scalatest?
-    - using spec?
+- write some unit tests using scalatest?
 - implement HTML parsing
